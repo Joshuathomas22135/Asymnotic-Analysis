@@ -25,3 +25,24 @@ if flag == True:
 else:
     print("Not found")
 
+print("\n")
+
+print("O(n²)")
+
+steps = 0
+
+for i in range(len(scores)):
+    for j in range(i+1, len(scores)):
+        steps += 1
+        if scores[i] == scores[j]:
+            print(f"Pair found: {scores[i]} at positions {i} and {j}")
+
+print("Nested comparison steps:", steps)
+
+print("\n")
+print("Asymptotic Summary")
+print("-------------------")
+print("Direct index access:       Θ(1)")
+print("Best-case search:          Ω(1)")
+print("Linear search:             O(n)")
+print("Nested pair comparison:    O(n²)")
